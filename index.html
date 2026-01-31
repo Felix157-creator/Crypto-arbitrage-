@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CryptoPro - Professional Crypto Investment Platform</title>
+<style>
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:linear-gradient(135deg,#0a1628,#1e3a5f); color:#fff; overflow-x:hidden; }
+
+/* Navigation */
+.navbar { background: rgba(20, 35, 60, 0.95); backdrop-filter: blur(10px); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0, 217, 255, 0.2); }
+.logo { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: #00d9ff; }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: #00d9ff; }
+.btn-nav { padding: 10px 20px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-size: 14px; }
+.btn-login { background: transparent; color: #00d9ff; border: 2px solid #00d9ff; }
+.btn-signup { background: linear-gradient(135deg, #00d9ff, #0099cc); color: #fff; border: none; }
+.btn-signup:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4); }
+
+.container { max-width:900px; margin:30px auto; padding:0 20px; }
+.card { background: rgba(20,35,60,0.9); border-radius:24px; padding:30px; margin-bottom:24px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.4); transition:0.3s; }
+.card:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(0,0,0,0.5); }
+
+/* Hero */
+.hero { text-align: center; padding: 60px 20px 40px; background: rgba(0, 0, 0, 0.2); border-radius: 24px; margin-bottom: 30px; }
+.hero h1 { font-size: 42px; margin-bottom: 16px; background: linear-gradient(135deg, #00d9ff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 18px; color: rgba(255, 255, 255, 0.8); margin-bottom: 30px; line-height: 1.6; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-large { padding: 16px 32px; font-size: 18px; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; border: none; }
+.btn-primary { background: linear-gradient(135deg, #00d9ff, #0099cc); color: #fff; }
+.btn-secondary { background: transparent; color: #00d9ff; border: 2px solid #00d9ff; }
+.btn-large:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 217, 255, 0.4); }
+
+.stats { display:flex; justify-content:space-around; background:rgba(0,217,255,0.1); border-radius:16px; padding:12px; margin-bottom:20px; flex-wrap:wrap; }
+.stat { text-align:center; margin:6px 0; }
+.stat-value { font-size:20px; font-weight:700; color:#00d9ff; }
+.stat-label { font-size:11px; color:rgba(255,255,255,0.7); text-transform:uppercase; }
+
+.crypto-card { display:flex; justify-content:space-between; align-items:center; background:rgba(10,25,45,0.6); border-radius:16px; padding:16px; margin-bottom:12px; transition:all 0.3s; }
+.crypto-card:hover { background:rgba(10,25,45,0.8); transform:translateX(5px); }
+.asset-price { font-size:18px; font-weight:700; }
+.asset-change { font-size:13px; padding:4px 8px; border-radius:6px; }
+.positive { color:#00ff88; background: rgba(0,255,136,0.1); }
+.negative { color:#ff006e; background: rgba(255,0,110,0.1); }
+
+h2.section-title { color:#00d9ff; margin-bottom:16px; text-align:left; letter-spacing:2px; }
+
+.testimonials { margin-top:20px; overflow:hidden; height:80px; position:relative; }
+.testimonial { background:rgba(10,25,45,0.6); border-radius:16px; padding:20px; margin-bottom:12px; font-size:14px; line-height:1.5; position:absolute; width:100%; opacity:0; transition:opacity 1s; }
+.testimonial.active { opacity:1; position:relative; }
+
+@keyframes pulse { 0%,100% { transform:scale(1);} 50%{transform:scale(1.05);} }
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 16px; }
+    .btn-large { font-size: 16px; padding: 14px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">
+        <span style="font-size: 28px;">💎</span>
+        <span>CryptoPro</span>
+    </div>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#markets">Markets</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="login.html" class="btn-nav btn-login">Login</a>
+        <a href="signup.html" class="btn-nav btn-signup">Sign Up</a>
+    </div>
+</nav>
+
+<div class="container">
+
+<!-- Hero -->
+<div class="hero" id="home">
+    <h1>Professional Crypto Investment Platform</h1>
+    <p>Join 50,000+ investors earning daily profits through our advanced trading system. Trusted for over 10 years with $125M+ in total profits paid.</p>
+    <div class="cta-buttons">
+        <a href="signup.html" class="btn-large btn-primary">🚀 Start Trading Now</a>
+        <a href="login.html" class="btn-large btn-secondary">🔐 Login to Dashboard</a>
+    </div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat"><div class="stat-value" id="activeUsers">50,123</div><div class="stat-label">Active Users</div></div>
+  <div class="stat"><div class="stat-value" id="totalProfits">$125.7M</div><div class="stat-label">Total Profits Paid</div></div>
+  <div class="stat"><div class="stat-value">10+</div><div class="stat-label">Years Trusted</div></div>
+</div>
+
+<!-- Markets -->
+<div class="card" id="markets">
+  <h2 class="section-title">📊 Live Crypto Markets</h2>
+  <div id="cryptoContainer"></div>
+</div>
+
+<!-- Testimonials -->
+<div id="testimonials">
+  <h2 class="section-title">💬 Investor Testimonials</h2>
+  <div class="testimonials">
+    <div class="testimonial active">"I've been investing here for 3 years. My portfolio has grown 5x!" - <b>Jane K.</b></div>
+    <div class="testimonial">"Reliable and professional service. Always prompt support." - <b>Mark T.</b></div>
+    <div class="testimonial">"CryptoPro gave me my first real profits in crypto trading!" - <b>Lydia W.</b></div>
+    <div class="testimonial">"Best investment platform I've used. Support is excellent!" - <b>James P.</b></div>
+    <div class="testimonial">"Withdrew $2,500 last month with no issues. Highly recommend!" - <b>Angela T.</b></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="card" style="background: linear-gradient(135deg, #00d9ff, #a855f7); margin-top: 40px;">
+  <h2 style="color: #fff; margin-bottom: 16px;">Ready to Start Earning?</h2>
+  <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 24px;">Join thousands of successful investors today</p>
+  <a href="signup.html" class="btn-large" style="background: #fff; color: #0a1628;">
+    Create Free Account →
+  </a>
+</div>
+
+</div>
+
+<script>
+let exchanges = [
+  {name:"BTC/USDT",price:64256,change:+2.3},
+  {name:"ETH/USDT",price:3425,change:-1.2},
+  {name:"BNB/USDT",price:580,change:+1.5},
+  {name:"SOL/USDT",price:98.8,change:+2.1},
+  {name:"DOGE/USDT",price:0.25,change:-0.4},
+  {name:"XAU/USDT",price:2045,change:+0.35}
+];
+
+function renderExchanges(){
+  const container = document.getElementById('cryptoContainer');
+  container.innerHTML='';
+  exchanges.forEach(c=>{
+    const div=document.createElement('div');
+    div.className='crypto-card';
+    div.innerHTML=`<span>${c.name}</span>
+                   <span class="asset-price">$${c.price}</span>
+                   <span class="asset-change ${c.change>0?'positive':'negative'}">${c.change>0?'+':''}${c.change}%</span>`;
+    container.appendChild(div);
+  });
+}
+
+// Testimonials rotation
+let currentTestimonial=0;
+setInterval(()=>{
+  const testimonials=document.querySelectorAll('.testimonial');
+  testimonials.forEach(t=>t.classList.remove('active'));
+  testimonials[currentTestimonial].classList.add('active');
+  currentTestimonial=(currentTestimonial+1)%testimonials.length;
+},4000);
+
+// Live updates
+function updateStats() {
+    const usersEl = document.getElementById('activeUsers');
+    const profitsEl = document.getElementById('totalProfits');
+    
+    let users = parseInt(usersEl.textContent.replace(',', ''));
+    users += Math.floor(Math.random() * 100) - 50;
+    users = Math.max(48000, Math.min(52000, users));
+    usersEl.textContent = users.toLocaleString();
+    
+    let profits = parseFloat(profitsEl.textContent.replace('$', '').replace('M', ''));
+    profits += (Math.random() - 0.5) * 0.5;
+    profits = Math.max(120, Math.min(130, profits));
+    profitsEl.textContent = '$' + profits.toFixed(1) + 'M';
+}
+
+setInterval(()=>{
+  exchanges.forEach(c=>{
+    c.change=(Math.random()*4-2).toFixed(2);
+    c.price=(c.price*(1 + c.change/100)).toFixed(2);
+  });
+  renderExchanges();
+  updateStats();
+},3000);
+
+renderExchanges();
+</script>
+</body>
+</html>
